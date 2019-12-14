@@ -1,0 +1,16 @@
+<br>
+    <br>
+<h1>Tendencias</h1>
+<hr/>
+<div class="card-columns">
+
+  <div class="card animated fadeIn fast"*ngFor="let tendencia of tendencias;let i = index">
+  <img class="card-img-top"  [src]="tendencia.img" [alt]="tendencia.nombre">
+    <div class="card-body">
+      <h4 class="card-title">{{ tendencia.nombre }}</h4>
+      <p class="card-text">{{ tendencia.bio }}</p>
+      <button class="btn btn-outline-primary btn-block" (click)="verHeroe(tendencia.id)">Ver más...</button>
+      <!--<a [routerLink]="['/heroe','i']" class="btn btn-outline-primary btn-block">Ver más...</a>-->
+    </div>
+  </div>
+</div>

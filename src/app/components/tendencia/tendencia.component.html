@@ -1,0 +1,25 @@
+<br>
+<br>
+<h1 class="fadeIn">{{ tendencia.nombre | uppercase}}</h1>
+<hr/>
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+    <img src="{{ tendencia.img }}" alt="" class="img-fluid">
+    <br/><br/>
+    <!--<a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>-->
+    <a [routerLink]="['/tendencias']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{ tendencia.nombre }}</h3>
+    <hr/>
+    <p>
+      {{ tendencia.bio }}
+    </p>
+    <p>
+        {{ tendencia.bio2 }}
+      </p>
+    <div>
+      <img class="img-logo" src="assets/img/logo.png" [src]="casa"  alt="">
+    </div>
+  </div>
+</div>
