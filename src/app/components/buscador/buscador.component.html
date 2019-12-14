@@ -1,7 +1,7 @@
 <h1>Buscando: <small>{{ termino }}</small></h1>
 <hr/>
 
-<div class="row animated fadeIn fast" *ngIf="tendencias.length == 0">
+<div class="row animated fadeIn fast" *ngIf="tendencia.length == 0">
   <div class="col-md-12">
     <div class="alert alert-info" role="alert">
       No existen resultados con el término <b>{{ termino }}</b>.
@@ -11,7 +11,7 @@
 
 <div class="card-columns">
 
-  <div class="card animated fadeIn fast"*ngFor="let tendencia of tendencias;let i = index">
+  <div class="card animated fadeIn fast" *ngFor="let ten of tendencia;let i = index">
     <img class="card-img-top"  [src]="tendencia.img" [alt]="tendencia.nombre">
     <div class="card-body">
       <h4 class="card-title">{{ tendencia.nombre }}</h4>
